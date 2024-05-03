@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulaire d'envoi de demande reprographique</title>
+    <link rel="stylesheet" type="text/css" href="formulaire.css">
+</head>
+<body>
+    <h2>Formulaire d'envoi de demande reprographique</h2>
+    <form action="envoie.php" method="POST" enctype="multipart/form-data">
+        <label for="date">Date :</label>
+        <input type="date" name="date" required><br><br>
+        
+        <label for="heure">Heure d'envoi :</label>
+        <input type="time" name="heure" required><br><br>
+        
+        <label for="pdf">Fichier PDF :</label>
+        <input type="file" name="pdf" accept=".pdf,.jpg" required><br><br>
+        
+        <label for="format">Format :</label>
+        <select name="format" required>
+            <option value="paysage">Paysage</option>
+            <option value="portrait">Portrait</option>
+        </select><br><br>
+        
+        <label for="taille">Taille :</label>
+        <select name="taille" required>
+            <option value="A3">A3</option>
+            <option value="A4">A4</option>
+        </select><br><br>
+        
+        <label for="agrafer">Agrafer :</label>
+        <input type="checkbox" name="agrafer"><br><br>
+        
+        <label for="utilisateur">Destinataires (séparés par des virgules) :</label>
+        <input type="text" name="utilisateur" required><br><br>
+        
+        <label for="message">Message :</label>
+        <textarea name="message" required></textarea><br><br>
+        
+        <input type="submit" value="Envoyer la demande">
+    </form>
+</body>
+</html>
